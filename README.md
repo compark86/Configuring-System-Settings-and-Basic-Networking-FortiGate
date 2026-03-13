@@ -29,5 +29,31 @@ This repository contains lab exercises for configuring basic system settings and
 - All configurations were tested on FortiOS 7.6.4
 - IP addresses used are from private ranges (lab environment)
 
-## Network topology
+## 📌 Network topology
 ![Network topology](topology.png)
+
+
+## Network topology diagram
+                Internet
+                    |
+                    |
+            Port1 (WAN)
+             10.2.3.107
+          (GUI Management)
+                    |
+        +---------------------+
+        |  FortiGate NGFW     |
+        |                     |
+        | Port2 (Internal)   |
+        | 192.168.10.1/24    |
+        +---------------------+
+                    |
+                    |
+             Internal Network
+                    |
+            +----------------+
+            |   Windows 10   |
+            | IP: 192.168.10.5
+            | GW: 192.168.10.1
+            | DNS: 8.8.8.8
+            +----------------+
