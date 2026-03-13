@@ -1,0 +1,7 @@
+1. View interface configuration:    show system interface
+
+2. View DHCP server configuration:  show system dhcp server
+
+3. View routing table:  get router info routing-table all
+
+4. Test connectivity: execute ping 8.8.8.8
