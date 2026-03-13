@@ -30,4 +30,4 @@ This repository contains lab exercises for configuring basic system settings and
 - IP addresses used are from private ranges (lab environment)
 
 ## Network topology
-!topology.png 
+![Network topology](topology.png)
