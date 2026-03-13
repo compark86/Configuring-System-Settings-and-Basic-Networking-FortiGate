@@ -28,3 +28,6 @@ This repository contains lab exercises for configuring basic system settings and
 ## 📝 Notes
 - All configurations were tested on FortiOS 7.6.4
 - IP addresses used are from private ranges (lab environment)
+
+## Network topology
+!topology.png 
