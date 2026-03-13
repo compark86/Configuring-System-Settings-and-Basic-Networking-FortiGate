@@ -1,0 +1,47 @@
+# FortiGate CLI Commands
+
+## Task 1: Configuring the LAN interface, including DHCP server
+
+### 1. Configure port5 (LAN) interface:
+```bash
+config system interface
+    edit "port5"
+        set alias "LAN-HQ"
+        set mode static
+        set ip 172.16.10.1 255.255.255.0
+        set allowaccess ping https http ssh telnet
+        set role lan
+        set description "LAN port connected to HQ"
+        set device-identification enable
+    next
+end
+
+
+### 2. Configure DHCP server on port5:
+
+config system dhcp server
+    edit 1
+        set interface "port5"
+        set netmask 255.255.255.0
+        set default-gateway 172.16.10.1
+        set dns-server 8.8.8.8 8.8.4.4
+        config ip-range
+            edit 1
+                set start-ip 172.16.10.21
+                set end-ip 172.16.10.254
+            next
+        end
+        set lease-time 86400
+    next
+end
+
+### 3. Enable DHCP server on the interface:
+
+config system interface
+    edit "port5"
+        set dhcp-server enable
+    next
+end
+
+
+
